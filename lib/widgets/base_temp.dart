@@ -26,7 +26,7 @@ class BaseTemplate extends ConsumerWidget {
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarIconBrightness: Brightness.dark,
-            systemNavigationBarColor: Colors.black87,
+            systemNavigationBarColor: Colors.transparent,
             systemNavigationBarIconBrightness: Brightness.light,
             systemNavigationBarDividerColor: Colors.transparent,
           ),
