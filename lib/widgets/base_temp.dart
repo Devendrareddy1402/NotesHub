@@ -18,11 +18,10 @@ class BaseTemplate extends ConsumerWidget {
 
     return Scaffold(
         extendBody: true,
-        extendBodyBehindAppBar: true,
         appBar: AppBar(
           elevation: 0,
           toolbarHeight: 80,
-          leadingWidth: 80,
+          leadingWidth: 65,
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarIconBrightness: Brightness.dark,
@@ -36,7 +35,7 @@ class BaseTemplate extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 25),
                     child: CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.grey[200],
@@ -49,7 +48,9 @@ class BaseTemplate extends ConsumerWidget {
                         )))
               ]),
         ),
-        body: _screens[selectedIndex],
+        body: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: _screens[selectedIndex]),
         bottomNavigationBar: const Navigationline());
   }
 }
