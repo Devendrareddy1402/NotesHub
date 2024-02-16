@@ -11,9 +11,11 @@ class NotesScreen extends StatefulWidget {
 }
 
 class _NotesScreenState extends State<NotesScreen> {
+  int tappedIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
-    var tappedIndex = 0;
+    
     return SizedBox(
       height: double.infinity,
       width: double.infinity,
