@@ -17,21 +17,45 @@ class BaseTemplate extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedIndex = ref.watch(navIndexProvider);
 
-    return AnnotatedRegion(
-        value: const SystemUiOverlayStyle(
+    return Scaffold(
+      extendBody: true,
+      appBar: AppBar(
+        elevation: 0,
+        toolbarHeight: 80,
+        leadingWidth: 65,
+        systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.dark,
           systemNavigationBarColor: Colors.transparent,
           systemNavigationBarIconBrightness: Brightness.light,
           systemNavigationBarDividerColor: Colors.transparent,
         ),
-        child: Scaffold(
-            extendBody: true,
-            backgroundColor: Colors.white,
-            body: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Column(
-                    children: [const Header(), _screens[selectedIndex]])),
-            bottomNavigationBar: const Navigationline()));
+        backgroundColor: Colors.white,
+        leading: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.only(left: 25),
+              child: CircleAvatar(
+                radius: 22,
+                backgroundColor: Colors.grey[200],
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.widgets_rounded,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+      body: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: _screens[selectedIndex]),
+      bottomNavigationBar: const Navigationline(),
+    );
   }
 }

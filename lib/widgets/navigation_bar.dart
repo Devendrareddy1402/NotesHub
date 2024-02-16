@@ -11,18 +11,33 @@ class Navigationline extends StatelessWidget {
     return SizedBox(
       height: sysNavBarHeight + 80,
       child: Container(
-        padding: EdgeInsets.only(left: 60, right: 60, bottom: sysNavBarHeight),
+        padding: EdgeInsets.only(
+          left: 60,
+          right: 60,
+          bottom: sysNavBarHeight,
+        ),
         decoration: const BoxDecoration(
           color: Colors.black87,
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(35), topLeft: Radius.circular(35)),
+            topRight: Radius.circular(35),
+            topLeft: Radius.circular(35),
+          ),
         ),
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            NavIcon(iconIndex: 0, icon: Icons.home_filled),
-            NavIcon(iconIndex: 1, icon: Icons.event_note),
-            NavIcon(iconIndex: 2, icon: Icons.person),
+            NavIcon(
+              iconIndex: 0,
+              icon: Icons.home_filled,
+            ),
+            NavIcon(
+              iconIndex: 1,
+              icon: Icons.event_note,
+            ),
+            NavIcon(
+              iconIndex: 2,
+              icon: Icons.person,
+            ),
           ],
         ),
       ),
