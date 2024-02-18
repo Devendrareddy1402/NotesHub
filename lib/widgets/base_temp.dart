@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:notes_app_1/providers/providers.dart';
+import 'header.dart';
 import 'navigation_bar.dart';
 import 'package:notes_app_1/screens/home_screen.dart';
 import 'package:notes_app_1/screens/notes_screen.dart';
