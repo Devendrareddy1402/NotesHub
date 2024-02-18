@@ -11,16 +11,23 @@ class HomeScreen extends StatelessWidget {
     return Container(
       color: Colors.white,
       width: double.infinity,
-      child:
-          const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text('Good Morning,',
-            textAlign: TextAlign.start, style: TextStyle(fontSize: 30)),
-        Text('Jessy',
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Good Morning,',
             textAlign: TextAlign.start,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-        CalendarView(),
-        TodoView(),
-      ]),
+            style: TextStyle(fontSize: 30),
+          ),
+          Text(
+            'Jessy',
+            textAlign: TextAlign.start,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          ),
+          CalendarView(),
+          TodoView(),
+        ],
+      ),
     );
   }
 }

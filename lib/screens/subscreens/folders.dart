@@ -4,6 +4,8 @@ class FolderScreen extends StatelessWidget {
   const FolderScreen({super.key});
   @override
   Widget build(context) {
-    return const Text('Folders Screen');
+    return const Center(
+      child: Text('Folders Screen'),
+    );
   }
 }

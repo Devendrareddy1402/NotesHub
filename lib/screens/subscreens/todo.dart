@@ -4,6 +4,8 @@ class TodoScreen extends StatelessWidget {
   const TodoScreen({super.key});
   @override
   Widget build(context) {
-    return const Text('To Do');
+    return const Center(
+      child:  Text('To Do'),
+    );
   }
 }

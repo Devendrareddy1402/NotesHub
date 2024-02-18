@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app_1/screens/subscreens/folders.dart';
+import 'package:notes_app_1/screens/subscreens/notes.dart';
+import 'package:notes_app_1/screens/subscreens/remainder.dart';
+import 'package:notes_app_1/screens/subscreens/todo.dart';
 import 'package:notes_app_1/widgets/row_builder.dart';
+import 'package:notes_app_1/widgets/todo_checkmark.dart';
 
 import 'package:styled_text/styled_text.dart';
 
@@ -12,10 +17,9 @@ class NotesScreen extends StatefulWidget {
 
 class _NotesScreenState extends State<NotesScreen> {
   int tappedIndex = 0;
-  
+
   @override
   Widget build(BuildContext context) {
-    
     return SizedBox(
       height: double.infinity,
       width: double.infinity,
@@ -72,13 +76,16 @@ class _NotesScreenState extends State<NotesScreen> {
           Expanded(
             child: Stack(
               children: [
+                if (tappedIndex == 0) FolderScreen(),
+                if (tappedIndex == 1) AddNotesScreen(),
+                if (tappedIndex == 2) TodoScreen(),
+                if (tappedIndex == 3) RemainderScreen(),
                 RowBuilder(
                   choosenIndex: tappedIndex,
                   onElementTap: (index) {
                     setState(
                       () {
                         tappedIndex = index;
-                        print(tappedIndex);
                       },
                     );
                   },

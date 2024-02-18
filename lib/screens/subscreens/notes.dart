@@ -4,6 +4,8 @@ class AddNotesScreen extends StatelessWidget {
   const AddNotesScreen({super.key});
   @override
   Widget build(context) {
-    return const  Text('AddNotesScreen');
+    return const Center(
+      child: Text('AddNotesScreen'),
+    );
   }
 }
