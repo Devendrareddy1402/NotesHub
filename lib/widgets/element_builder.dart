@@ -24,8 +24,6 @@ class _ElementBuilderState extends State<ElementBuilder> {
     return GestureDetector(
       onTap: () {
         widget.onTap(widget.index);
-        print(widget.index);
-        print(widget.isSelected);
       },
       child: Container(
         margin: const EdgeInsets.all(8.0),
@@ -33,7 +31,7 @@ class _ElementBuilderState extends State<ElementBuilder> {
         child: Text(
           widget.name,
           style: TextStyle(
-            color: widget.isSelected ? Colors.black : Colors.blue,
+            color: widget.isSelected ? Colors.orange : Colors.black38,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
